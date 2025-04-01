@@ -1,0 +1,36 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 28 mar 2025, 10:43:13
+    Author     : tarcz
+*/
+body {
+    background-color: rgb(46,47,51);
+    background-image: url("images/GSA_banner.jpg");
+    background-repeat: repeat;
+    background-position: top center;
+    color: white;
+}
+
+.heading{
+    color: white;
+    text-align: center;
+    font-family: "Helvetica","sans-serif";
+}
+
+.content{
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    color: black;
+    padding: 50px 25px 50px 25px;
+    vertical-align: top;
+}
+
+hr.articleBreak{
+    border-style: dotted;
+    border-width: 2px;
+    border-color: rgb(46,47,51);
+}
