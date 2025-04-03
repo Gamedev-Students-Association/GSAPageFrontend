@@ -12,6 +12,7 @@ body {
     background-repeat: repeat;
     background-position: top center;
     color: white;
+    margin: 0;
 }
 
 .heading{
@@ -33,4 +34,10 @@ hr.articleBreak{
     border-style: dotted;
     border-width: 2px;
     border-color: rgb(46,47,51);
+}
+
+.mainfooter{
+   background-color: black;
+   padding: 10px;
+   width: 100%;
 }
