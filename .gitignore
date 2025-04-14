@@ -1,7 +1,7 @@
 Gruntfile.js
 .bowerrc
 gulpfile.js
-bowser.json
+bower.json
 
 test
 nbproject/
