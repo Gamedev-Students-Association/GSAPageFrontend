@@ -15,21 +15,47 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <!-- TODO: Wersja angielska--><
+            
         <div class="heading">
             <h1 title="GSA">Gamedev Student Association</h1>
             <p>Koło naukowe gamedevu na Wydziale Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu jagiellońskiego</p>
         </div>
+        
+        <nav class="topnav">
+            <a href="index.html" tabindex="0">Główna</a>
+            <a href="sekcje.html" tabindex="0">Sekcje</a>
+            <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()" tabindex="0">Rozwiń</a>
+        </nav>
+        
         <div class="content">
-            <h2 title="Podobno">Test</h2>
-            <p>Test content</p>
-            <hr class="articleBreak">
+            <section id="history">
+                <h2>Krótka historia</h2>
+                <p>Koło powstało w trakcie pandemii w 2020 roku. Zrzesza studentów informatyki gier komputerowych</p>
+            </section>
+            <section id="eventy">
+                <h2>Eventy</h2>
+                <p>Koło bierze udział i organizuje eventy</p>
+            </section>
+            <section id="social">
+                <h2>Social Media</h2>
+                <ul>
+                    <!-- Obecne obrazy pobrane są z oficjalnych stron właścicieli praw autorskich i muszą spełniać ich wymagania:
+                        Youtube: https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
+                        Facebook: https://about.meta.com/brand/resources/facebook/logo/
+                    -->
+                    <li><a href="https://www.facebook.com/GamedevStudents/"><img src='images/Facebook_Logo_Primary.png' alt='Facebook logo' style='height: 16px; padding: 2px'> Gamedev Sdutent Association na Facebook'u</a></li>
+                    <li><a href='https://www.youtube.com/@gamedevstudentsassociation'><img src="images/yt_icon_rgb.png" alt="youtube icon" style='height: 20px; padding: 3px'>Kanał Gamedev Student Association na Youtube</a></li>
+                </ul>
+                
+            </section>
             
             <script src="scripts/main.js"></script>
         </div>
         <footer class="mainfooter">
             @Copyright Gamedev Student Association<br>
             
-            Wydział: <a href="https://fais.uj.edu.pl/">Wydział macierzysty</a>
+            Wydział: <a href="https://fais.uj.edu.pl/">Wydział Fizyki, Astronomii i Informatyki Stosowanej Uniwersytety jagiellońskiego</a>
         </footer>
     </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="pl-PL">
+    <head>
+        <title>GSA</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="images/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="images/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer></script>
+    </head>
+    
+    <body>
+        <div class="heading">
+            <h1 title="GSA">Gamedev Student Association</h1>
+            <p>Koło naukowe gamedevu na Wydziale Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu jagiellońskiego</p>
+        </div>
+        
+        <nav class="topnav">
+            <a href="index.html">Główna</a>
+            <a href="sekcje.html">Sekcje</a>
+            <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()">
+                Rozwiń
+            </a>
+        </nav>
+        
+        <div class="content">
+            <section>
+                <h2>Sekcja shaderów</h2>
+                <canvas id='gl-canvas' width ="640" height="800"></canvas>
+            </section>
+        </div>
+        
+         <script src="scripts/main.js"></script>
+         <script src="scripts/webgl-basic.js" type="module"></script>
+    </body>
+</html>
