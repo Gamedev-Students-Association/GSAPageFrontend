@@ -13,21 +13,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <link rel="stylesheet" href="main.css" type="text/css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
-      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
-      crossorigin="anonymous"
-      defer></script>
-        <script src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+        
     </head>
     
     <body>
-        <div class="heading">
+        <canvas id="background"></canvas>
+        <header class="heading">
             <h1 title="GSA">Gamedev Student Association</h1>
             <p>Koło naukowe gamedevu na Wydziale Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu jagiellońskiego</p>
-        </div>
-        
-        <nav class="topnav">
+        </header>
+            <nav class="topnav">
             <a href="index.html">Główna</a>
             <a href="sekcje.html">Sekcje</a>
             <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()">
@@ -38,13 +33,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <div class="content">
             <section>
                 <h2>Sekcja shaderów</h2>
-                <canvas id="canvasTest" width ="640" height="800"></canvas>
+                <p>Zaporoscy Kozacy do sułtana tureckiego!
+
+Ty, sułtanie, diable turecki, przeklętego diabła bracie i towarzyszu, samego Lucyfera sekretarzu. Jaki z ciebie do diabła rycerz, jeśli nie umiesz gołą dupą jeża zabić. Twoje wojsko zjada czarcie gówno. Nie będziesz ty, suki ty synu, synów chrześcijańskiej ziemi pod sobą mieć, walczyć będziemy z tobą ziemią i wodą, kurwa twoja mać. Kucharzu ty babiloński, kołodzieju macedoński, piwowarze jerozolimski, garbarzu aleksandryjski, świński pastuchu Wielkiego i Małego Egiptu, świnio armeńska, podolski złodziejaszku, kołczanie tatarski, kacie kamieniecki i błaźnie dla wszystkiego, co na ziemi i pod ziemią, szatańskiego węża potomku i chuju złamany. Świński ty ryju, kobyli zadzie, psie rzeźnika, niechrzczony łbie, kurwa twoja mać.
+
+O tak ci Kozacy zaporoscy odpowiadają, plugawcze. Nie będziesz ty nawet naszych świń wypasać. Teraz kończymy, daty nie znamy, bo kalendarza nie mamy, miesiąc na niebie, a rok w księgach zapisany, a dzień u nas taki jak i u was, za co możecie nas w dupę pocałować!
+
+Podpisali: Ataman Koszowy Iwan Sirko ze wszystkimi zaporożcami</p>
             </section>
+
+        
         </div>
-        
-        
-        
-        <script src="scripts/main.js"></script>
-        <script src="scripts/webgl-basic.js"></script>
+        <section id="social">
+                <h2>Social Media</h2>
+                <ul>
+                     <!--Obecne obrazy pobrane są z oficjalnych stron właścicieli praw autorskich i muszą spełniać ich wymagania:
+                        Youtube: https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
+                        Facebook: https://about.meta.com/brand/resources/facebook/logo/-->
+                    
+                    <li><a href="https://www.facebook.com/GamedevStudents/"><img src='images/Facebook_Logo_Primary.svg' alt='Facebook logo' style='height: 20px;'> Gamedev Sdutent Association na Facebook'u</a></li>
+                    <li><a href='https://www.youtube.com/@gamedevstudentsassociation'><img src="images/yt_icon_rgb.png" alt="youtube icon" style='height: 20px; padding: 3px'>Kanał Gamedev Student Association na Youtube</a></li>
+                </ul>
+                
+            </section>
+        <script src="scripts/main.js" type="module"></script>
     </body>
 </html>

@@ -1,14 +1,21 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
- */
-
-async function changeShader(){
-    const pole = document.getElement("canvasTest");
-    const shader = new GlslCanvas(pole);
-    //fetch(server);
+export async function loadBackground(VertexShader, FragmentShader){
+    const background = document.querySelector("#background");
+    const backgroundOpenGLContext = background.getContext("webgl");
     
-    const vertexShader = null;
-    const fragmentShader = null;
-    shader.load(fragmentShader, vertexShader);
+    if(backgroundOpenGLContext === null || arguments.length === 0){
+        const pageBody = document.body;
+        pageBody.style.backgrounColor = "rgb(46,47,51)";
+        pageBody.style.backgroundImage = 'url("images/GSA_banner.jpg")';
+        pageBody.style.backgroundRepeat = "repeat";
+        pageBody.style.backgroundPosition = "top center";
+        pageBody.style.color = "white";
+        pageBody.style.margin = "0";
+
+        return;
+    }
+//    background.style.heigth = "1000px";
+    
+    
+    backgroundOpenGLContext.clearColor(1.0, 1.0, 1.0, 1.0);
+    backgroundOpenGLContext.clear(backgroundOpenGLContext.COLOR_BUFFER_BIT);
 }

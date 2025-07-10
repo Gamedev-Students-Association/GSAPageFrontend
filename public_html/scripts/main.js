@@ -3,13 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-function dropDownMobileMenu(){
-    const menu = document.getElementsByClassName("topnav")[0];
-    if(menu.className === "topnav"){
-        menu.className += ' mobileVisible';
-        document.getElementsByClassName("icon")[0].innerHTML = "Zwiń";
-    } else {
-        menu.className = 'topnav';
-        document.getElementsByClassName("icon")[0].innerHTML = "Rozwiń";
-    }
-}
+import {loadBackground} from "./webgl-basic.js"
+
+loadBackground(1,1);
