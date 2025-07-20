@@ -5,4 +5,4 @@
 
 import {loadBackground} from "./webgl-basic.js"
 
-loadBackground(1,1);
+loadBackground();
