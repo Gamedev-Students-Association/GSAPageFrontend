@@ -24,24 +24,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <h1 title="GSA">Gamedev Student Association</h1>
             <p>Koło naukowe gamedevu na Wydziale Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu jagiellońskiego</p>
         </header>
-            <nav class="topnav">
+        
+        <nav class="topnav">
             <a href="index.html">Główna</a>
             <a href="sekcje.html">Sekcje</a>
-            <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()">
-                Rozwiń
-            </a>
+            <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()">Rozwiń</a>
         </nav>
         
         <div class="content">
-            <section>
-                <h2>Sekcja shaderów</h2>
-                <p>Sekcja shaderów zajmuje się shaderami.</p>
+            <section id="history">
+                <h2>Krótka historia</h2>
+                <p>Koło powstało w trakcie pandemii w 2020 roku. Zrzesza studentów informatyki gier komputerowych</p>
             </section>
-
-        
+            <section id="eventy">
+                <h2>Eventy</h2>
+                <p>Koło bierze udział i organizuje eventy</p>
+            </section>
         </div>
-        
-        
         <footer class="mainfooter">
             @Copyright Gamedev Student Association<br>
             
@@ -57,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 <li><a href='https://www.youtube.com/@gamedevstudentsassociation'><img src="images/yt_icon_rgb.png" alt="youtube icon" style='height: 20px; padding: 3px'>Kanał Gamedev Student Association na Youtube</a></li>
             </ul>
         </footer>
-        
         <script src="scripts/sekcje.js" type="module"></script>
+        <script src="scripts/dropdownMenu.js"></script>
     </body>
 </html>

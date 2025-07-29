@@ -7,8 +7,6 @@ export async function loadBackground(FragmentShader){
         pageBody.style.backgroundImage = 'url("images/GSA_banner.jpg")';
         pageBody.style.backgroundRepeat = "repeat";
         pageBody.style.backgroundPosition = "top center";
-        pageBody.style.color = "white";
-        pageBody.style.margin = "0";
 
         return;
     }
@@ -17,5 +15,5 @@ export async function loadBackground(FragmentShader){
     const background = document.querySelector("#background");
     const shaderLoader = new GlslCanvas(background);
     
-    shaderLoader.load(FragmentShader)
+    shaderLoader.load(FragmentShader);
 }
