@@ -4,18 +4,21 @@
  */
 import {loadBackground} from "./webgl-basic.js"
 
-loadBackground('\
-\n\attribute vec4 vPosition;\n\
-\n\
-void main() {\n\
-            gl_Position = vPosition;\n\
-        }','#ifdef GL_ES\n\
+loadBackground('#ifdef GL_ES\n\
 precision mediump float;\n\
 #endif\n\
 \n\
+uniform vec2 u_resolution;\n\
+uniform vec2 u_mouse;\n\
 uniform float u_time;\n\
 \n\
 void main() {\n\
-	gl_FragColor = vec4(0.991,0.324,1.000,1.000);\n\
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;\n\
+    st.x *= u_resolution.x/u_resolution.y;\n\
+\n\
+    vec3 color = vec3(0.);\n\
+    color = vec3(st.x,st.y,abs(sin(u_time)));\n\
+\n\
+    gl_FragColor = vec4(color,1.0);\n\
 }');
 
