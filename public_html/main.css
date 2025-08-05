@@ -1,111 +1,74 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-
- 
-    Created on : 28 mar 2025, 10:43:13
-    Author     : tarcz
-
-*/
-
-.heading{
-    color: white;
-    text-align: center;
-    font-family: "Helvetica","sans-serif";
+header{
+    position: sticky;
+    height: 85px;
+    width: 100%;
 }
 
-.content{
-    max-width: 900px;
-    margin: auto;
-    background-color: white;
-    color: black;
-    padding: 50px 25px 50px 25px;
-    vertical-align: top;
-}
-
-hr.articleBreak{
-    border-style: dotted;
-    border-width: 2px;
-    border-color: rgb(46,47,51);
-}
-
-.mainfooter{
-   background-color: black;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   width: 100%;
-}
 
 .topnav{
-    background-color: black;
-    overflow: hidden;
-}
-
-.topnav a{
-    color: white;
-    padding: 14px 20px;
-    float: left;
-    text-decoration: none;
-    text-align: center;
-}
-
-.topnav a:hover{
-    background-color: white;
-    color: black;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.icon{
-    color: white;
-}
-
-.icon:hover{
-    color: black;
-    background-color: white;
-}
-
-@media screen and (max-width: 800px){
-    .topnav a:not(:first-child) {display: none;};
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 800px){
-    .topnav.mobileVisible a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.mobileVisible {position: relative;}
-    
-    .topnav.mobileVisible a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-#background{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -99;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 100%;
+    z-index: 3;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(23, 21, 47, 0.001);
+    -webkit-backdrop-filter: blur(507px);
+    backdrop-filter: blur(507px);
+    border-radius: 1px;
+    
 }
 
-html {
-    height: 100%;
-}
-body {
-    min-height: 100%;
+*{
     color: white;
     margin: 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+body{
+    background-image: url("images/android-chrome-192x192.png");
+    background-repeat: repeat;
+}
+
+.subpages-list{
+    list-style-type: none;
+    display: flex;
+}
+
+.topnav-subpage{
+    padding: 0px 30px;
+}
+
+.join-button{
+    border-style: none;
+    border-radius: 15px;
+    background-color: #7721EF;
+    text-decoration: none;
+    padding: 6px 16px;
+    background-clip: padding-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.roboto-<roboto-roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+footer{
+    color: black;
+}
+
+.current-subpage {
+    color: #7721EF;
+    font-weight: bold;
 }
