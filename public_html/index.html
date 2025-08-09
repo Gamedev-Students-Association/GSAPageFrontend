@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html lang="pl-PL">
     <head>
         <title>GSA</title>
@@ -14,47 +11,74 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <canvas id="background"></canvas>
-        <header class="heading">
-            <h1 title="GSA">Gamedev Student Association</h1>
-            <p>Koło naukowe gamedevu na Wydziale Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu jagiellońskiego</p>
+        <header>
+            <nav aria-label="website navigation" class="topnav">
+                <a href="index.html"><img src="images/Logo.svg" height="47px" alt="Main site" role="img"/></a>
+                <ul class="subpages-list">
+                    <li class="topnav-subpage"><a href="sekcje.html">Sekcje</a></li>
+                    <li class="topnav-subpage"><a href="historia.html">Historia</a></li>
+                    <li class="topnav-subpage"><a href="wydarzenia.html">Wydarzenia</a></li>
+                    <li class="topnav-subpage"><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <a href="https://forms.gle/bF7fYinzHXs6Gaud8" class="join-button" target="_blank">Dołącz do nas</a>
+            </nav>
         </header>
         
-        <nav class="topnav">
-            <a href="index.html">Główna</a>
-            <a href="sekcje.html">Sekcje</a>
-            <a href="javascript:void(0);" class="icon" onclick="dropDownMobileMenu()">Rozwiń</a>
-        </nav>
+        <canvas id="background"></canvas>
         
-        <div class="content">
-            <section id="history">
-                <h2>Krótka historia</h2>
-                <p>Koło powstało w trakcie pandemii w 2020 roku. Zrzesza studentów informatyki gier komputerowych</p>
+        <main>
+            <section class="landin-view">
+                <h1>Gamedev Student Association</h1>
+                <p>Buttom-text</p>
             </section>
-            <section id="eventy">
-                <h2>Eventy</h2>
-                <p>Koło bierze udział i organizuje eventy</p>
+            
+            <section height="200px" width="100%">
+                O sole mio
             </section>
-        </div>
-        <footer class="mainfooter">
-            @Copyright Gamedev Student Association<br>
             
-            Wydział: <a href="https://fais.uj.edu.pl/">Wydział Fizyki, Astronomii i Informatyki Stosowanej Uniwersytety jagiellońskiego</a>
-            
-            <h2>Social Media</h2>
-            <ul>
-                <!--Obecne obrazy pobrane są z oficjalnych stron właścicieli praw autorskich i muszą spełniać ich wymagania:
-                    Youtube: https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
-                    Facebook: https://about.meta.com/brand/resources/facebook/logo/-->
-                    
-                <li><a href="https://www.facebook.com/GamedevStudents/"><img src='images/Facebook_Logo_Primary.svg' alt='Facebook logo' style='height: 20px;'> Gamedev Sdutent Association na Facebook'u</a></li>
-                <li><a href='https://www.youtube.com/@gamedevstudentsassociation'><img src="images/yt_icon_rgb.png" alt="youtube icon" style='height: 20px; padding: 3px'>Kanał Gamedev Student Association na Youtube</a></li>
-            </ul>
+            <section class="landin-view">
+                <h2>Prosty test rozszerzania się tła</h2>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <nav class="buttom-nav" aria-label="subpages">
+                <a href="index.html" aria-label="Strona Główna" class="index-buttom-link">
+                    <figure class="buttom-index-link">
+                        <img src="images/Logo Białe.svg" class="buttom-logo" alt="GSA logo" role="img"/>
+                        <figcaption class="buttom-index-link-title">Gamedev Student Association</figcaption>
+                    </figure>
+                </a>
+                <ul class="buttom-subpages subpages-list">
+                    <li class="buttom-subpage"><a class="buttom-link" href="sekcje.html">Sekcje</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="historia.html">Historia</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="wydarzenia.html">Wydarzenia</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="kontakt.html">Kontakt</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a></li>
+                </ul>
+            </nav>
+            <hr class="footer-divider">
+            <nav class="social_media_links" aria-label="social media">
+                <ul class="social-links">
+                    <li class="social-link"><a vertical-align="middle" href="https://www.facebook.com/GamedevStudents/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li class="social-link"><a href="https://www.instagram.com/gsa_uj/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li class="social-link"><a href="https://www.youtube.com/@gamedevstudentsassociation" target="_blank"><i class="bi bi-youtube"></i></a></li>
+                    <li class="social-link"><a href="https://discord.gg/ZZ7uCkD6ZC" target="_blank"><i class="bi bi-discord"></i></a></li>
+                    <li class="social-link"><a href="https://github.com/Gamedev-Students-Association" target="_blank"><i class="bi bi-github"></i></a></li>
+                </ul>
+                
+            </nav>
         </footer>
-        <script src="scripts/index.js" type="module"></script>
-        <script src="scripts/dropdownMenu.js"></script>
     </body>
+    
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <script src="scripts/index.js" type="module"></script>
 </html>
