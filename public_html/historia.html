@@ -19,7 +19,7 @@
     <body> 
         <header>
             <nav aria-label="website navigation" class="topnav">
-                <a href="index.html"><img src="images/Logo.svg" height="60px" alt="Main site"/></a>
+                <a href="index.html"><img src="images/Logo.svg" height="47px" alt="Main site"/></a>
                 <ul class="subpages-list">
                     <li class="topnav-subpage"><a href="sekcje.html">Sekcje</a></li>
                     <li class="topnav-subpage"><a href="historia.html" class="current-subpage">Historia</a></li>
@@ -29,8 +29,38 @@
                 <a href="https://forms.gle/bF7fYinzHXs6Gaud8" class="join-button" target="_blank">Dołącz do nas</a>
             </nav>
         </header>
+        <canvas id="background"></canvas>
+        
         <footer>
-            UJ
+            <nav class="buttom-nav" aria-label="subpages">
+                <a href="index.html" aria-label="Strona Główna" class="index-buttom-link">
+                    <figure class="buttom-index-link">
+                        <img src="images/Logo Białe.svg" class="buttom-logo" alt="GSA logo" role="img"/>
+                        <figcaption class="buttom-index-link-title">Gamedev Student Association</figcaption>
+                    </figure>
+                </a>
+                <ul class="buttom-subpages subpages-list">
+                    <li class="buttom-subpage"><a class="buttom-link" href="sekcje.html">Sekcje</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="historia.html">Historia</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="wydarzenia.html">Wydarzenia</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" href="kontakt.html">Kontakt</a></li>
+                    <li class="buttom-subpage"><a class="buttom-link" target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a></li>
+                </ul>
+            </nav>
+            <hr class="footer-divider">
+            <nav class="social_media_links" aria-label="social media">
+                <ul class="social-links">
+                    <li class="social-link"><a vertical-align="middle" href="https://www.facebook.com/GamedevStudents/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li class="social-link"><a href="https://www.instagram.com/gsa_uj/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li class="social-link"><a href="https://www.youtube.com/@gamedevstudentsassociation" target="_blank"><i class="bi bi-youtube"></i></a></li>
+                    <li class="social-link"><a href="https://discord.gg/ZZ7uCkD6ZC" target="_blank"><i class="bi bi-discord"></i></a></li>
+                    <li class="social-link"><a href="https://github.com/Gamedev-Students-Association" target="_blank"><i class="bi bi-github"></i></a></li>
+                </ul>
+                
+            </nav>
         </footer>
+        
+        <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+        <script src="scripts/historia.js" type="module"></script>
     </body>
 </html>
