@@ -28,3 +28,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+deno.lock
+/nbproject/private/
+
+.nbproject/*
