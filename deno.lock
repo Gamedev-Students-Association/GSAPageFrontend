@@ -5,10 +5,12 @@
     "npm:@types/node@^22.16.5": "22.17.1",
     "npm:@vitejs/plugin-vue@^6.0.1": "6.0.1_vite@7.1.2__@types+node@22.17.1__picomatch@4.0.3_vue@3.5.18__typescript@5.8.3_@types+node@22.17.1_typescript@5.8.3",
     "npm:@vue/tsconfig@0.7": "0.7.0_typescript@5.8.3_vue@3.5.18__typescript@5.8.3",
+    "npm:glsl-canvas-js@~0.2.9": "0.2.9",
     "npm:npm-run-all2@^8.0.4": "8.0.4",
     "npm:typescript@5.8": "5.8.3",
     "npm:vite-plugin-vue-devtools@8": "8.0.0_vite@7.1.2__@types+node@22.17.1__picomatch@4.0.3_vue@3.5.18__typescript@5.8.3_@types+node@22.17.1_typescript@5.8.3",
     "npm:vite@^7.0.6": "7.1.2_@types+node@22.17.1_picomatch@4.0.3",
+    "npm:vue-router@^4.5.1": "4.5.1_vue@3.5.18__typescript@5.8.3_typescript@5.8.3",
     "npm:vue-tsc@^3.0.4": "3.0.5_typescript@5.8.3",
     "npm:vue@^3.5.18": "3.5.18_typescript@5.8.3"
   },
@@ -622,6 +624,9 @@
         "he"
       ]
     },
+    "@vue/devtools-api@6.6.4": {
+      "integrity": "sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g=="
+    },
     "@vue/devtools-core@8.0.0_vue@3.5.18__typescript@5.8.3_vite@7.1.2__@types+node@22.17.1__picomatch@4.0.3_typescript@5.8.3_@types+node@22.17.1": {
       "integrity": "sha512-5bPtF0jAFnaGs4C/4+3vGRR5U+cf6Y8UWK0nJflutEDGepHxl5L9JRaPdHQYCUgrzUaf4cY4waNBEEGXrfcs3A==",
       "dependencies": [
@@ -881,6 +886,16 @@
         "is-stream"
       ]
     },
+    "gl-matrix@3.3.0": {
+      "integrity": "sha512-COb7LDz+SXaHtl/h4LeaFcNdJdAQSDeVqjiIihSXNrkWObZLhDI4hIkZC11Aeqp7bcE72clzB0BnDXr2SmslRA=="
+    },
+    "glsl-canvas-js@0.2.9": {
+      "integrity": "sha512-b26PXAU+nbAvu+JauFh8KQ8as/SAM/Aokad/Mb8phG2X8Ob1XTKlvFO/YUmgJbtmRPsLkIWmf3BjpGkIE3dJRw==",
+      "dependencies": [
+        "gl-matrix",
+        "promise-polyfill"
+      ]
+    },
     "he@1.2.0": {
       "integrity": "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==",
       "bin": true
@@ -1058,6 +1073,9 @@
       "dependencies": [
         "parse-ms"
       ]
+    },
+    "promise-polyfill@8.2.0": {
+      "integrity": "sha512-k/TC0mIcPVF6yHhUvwAp7cvL6I2fFV7TzF1DuGPI8mBh4QQazf36xCKEHKTZKRysEoTQoQdKyP25J8MPJp7j5g=="
     },
     "read-package-json-fast@4.0.0": {
       "integrity": "sha512-qpt8EwugBWDw2cgE2W+/3oxC+KTez2uSVR8JU9Q36TXPAGCaozfQUs59v4j4GFpWTaw0i6hAZSvOmu1J0uOEUg==",
@@ -1259,6 +1277,13 @@
     "vscode-uri@3.1.0": {
       "integrity": "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="
     },
+    "vue-router@4.5.1_vue@3.5.18__typescript@5.8.3_typescript@5.8.3": {
+      "integrity": "sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==",
+      "dependencies": [
+        "@vue/devtools-api",
+        "vue"
+      ]
+    },
     "vue-tsc@3.0.5_typescript@5.8.3": {
       "integrity": "sha512-PsTFN9lo1HJCrZw9NoqjYcAbYDXY0cOKyuW2E7naX5jcaVyWpqEsZOHN9Dws5890E8e5SDAD4L4Zam3dxG3/Cw==",
       "dependencies": [
@@ -1316,10 +1341,12 @@
         "npm:@types/node@^22.16.5",
         "npm:@vitejs/plugin-vue@^6.0.1",
         "npm:@vue/tsconfig@0.7",
+        "npm:glsl-canvas-js@~0.2.9",
         "npm:npm-run-all2@^8.0.4",
         "npm:typescript@5.8",
         "npm:vite-plugin-vue-devtools@8",
         "npm:vite@^7.0.6",
+        "npm:vue-router@^4.5.1",
         "npm:vue-tsc@^3.0.4",
         "npm:vue@^3.5.18"
       ]
