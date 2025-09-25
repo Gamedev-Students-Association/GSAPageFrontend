@@ -10,26 +10,26 @@ Po pobraniu należy użyć komend:
 
 dla node.js:
 
-'''powershell
+```powershell
 npm install
-'''
+```
 
 dla deno:
 
-'''powershell
+```powershell
 deno install
-'''
+```
 
 Aby uruchomić serwer do testowania naluży użyć:
 
 dla node.js:
 
-'''powershell
+```powershell
 npm run dev
-'''
+```
 
 dla deno:
 
-'''powershell
+```powershell
 deno task dev
-'''
+```
