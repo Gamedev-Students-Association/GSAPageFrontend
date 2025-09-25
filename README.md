@@ -33,3 +33,6 @@ dla deno:
 ```powershell
 deno task dev
 ```
+=======
+## Opis
+Tu znajduje się kod nowej strony koła.
