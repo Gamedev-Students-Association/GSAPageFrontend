@@ -12,14 +12,14 @@ precision mediump float;\n\
 uniform float u_time;\n\
 \n\
 void main() {\n\
-	gl_FragColor = vec4(1.0,0.0,1.0,1.0);\n\
+	gl_FragColor = vec4(0.0,0.0,0.3,1.0);\n\
 }')
 </script>
 
 <template>
     <div>
-        <h1>Sekcje</h1>
-        <p>Na razie nic</p>
+        <h1>Historia koła</h1>
+        <p>Po upadku oryginalnego skisu Studenci WFAIS UJ postanowili stworzyć koło Gamedevu.</p>
     </div>
 
 </template>

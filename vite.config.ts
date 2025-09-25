@@ -7,7 +7,13 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (element) => element.startsWith('iconify-icon')
+        }
+      }
+    }),
     vueDevTools(),
   ],
   resolve: {

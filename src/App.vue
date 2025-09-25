@@ -2,20 +2,28 @@
   import { ref, type Ref, computed } from 'vue';
   import Topnav from './components/Topnav.vue';
   import Background from './components/Background.vue';
+  import Buttomnav from './components/Buttomnav.vue';
 
   const v: Ref<number> = ref(0);
+  const backgroundShaderCode: Ref<string | undefined> = ref("");
 
   const mainHeaderColour = computed(() => {
     return {special: !(v.value%10)};
   })
+
+  function changeBackground(newBackgroundCode?: string){
+    backgroundShaderCode.value = newBackgroundCode;
+  }
 </script>
 
 <template>
-  <Background/>
+  <Background :backgroundFragmentShaderCode="backgroundShaderCode"/>
   <Topnav/>
+  
   <main>
-    <RouterView></RouterView>
+    <RouterView @load-background="changeBackground"></RouterView>
   </main>
+  <Buttomnav/>
 </template>
 
 <style scoped>
@@ -34,8 +42,6 @@
     position: relative;
     padding: 0;
     box-sizing: border-box;
-    height: 100%;
-    width: 100%;
     top: 0;
     left: 0;
   }

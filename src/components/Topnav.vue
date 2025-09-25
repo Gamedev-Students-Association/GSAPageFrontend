@@ -7,8 +7,11 @@
     <nav aria-label="navigate subpages">
         <router-link to="/"><img role="img" src="/src/images/Logo.svg"></img></router-link>
         <ul>
+            <li><router-link to="/Wydarzenia">Wydarzenia</router-link></li>
             <li><router-link to="/Sekcje">Sekcje</router-link></li>
-            <li>Projekty</li>
+            <li><router-link to="/Projekty">Projekty</router-link></li>
+            <li><router-link to="/Historia">Historia</router-link></li>
+            <li><router-link to="/Kontakt">Kontakt</router-link></li>
         </ul>
         <a id='join-button' target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a>
     </nav>
