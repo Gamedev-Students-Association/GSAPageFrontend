@@ -1,8 +1,8 @@
 # GSA Frontend
 
-## opis
+## Opis
 
-W tym repozytorium znajduje się kod strony koła GSA. Napisany jest on przy użyciu frameworku vue.
+Tu znajduje się kod nowej strony koła.
 
 ## Instrukcje
 
@@ -33,6 +33,3 @@ dla deno:
 ```powershell
 deno task dev
 ```
-=======
-## Opis
-Tu znajduje się kod nowej strony koła.
