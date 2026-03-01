@@ -1,0 +1,11 @@
+main{
+    min-height: 100vh;
+}
+
+h1, p{
+    text-align: center;
+}
+
+h1{
+    padding-top: 200px;
+}

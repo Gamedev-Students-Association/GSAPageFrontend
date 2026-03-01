@@ -1,17 +1,38 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 
+    onMounted(() => {
+        switch(window.location.pathname.split("/")[1]) {
+        case "wydarzenia.html":
+        case "wydarzenia":
+            document.getElementById("wydarzenia")?.classList.add("current-top-subpage")
+            break;
+        case "sekcje.html":
+            document.getElementById("sekcje")?.classList.add("current-top-subpage")
+            break;
+        case "projekty.html":
+            document.getElementById("projekty")?.classList.add("current-top-subpage")
+            break;
+        case "historia.html":
+            document.getElementById("historia")?.classList.add("current-top-subpage")
+            break;
+        case "kontakt.html":
+            document.getElementById("kontakt")?.classList.add("current-top-subpage")
+            break;
+    }
+    })
 </script>
 
 <template>
 <header>
     <nav aria-label="navigate subpages">
-        <router-link to="/"><img role="img" src="/src/images/Logo.svg"></img></router-link>
+        <a href="/"><img role="img" src="/src/images/Logo.svg"></img></a>
         <ul>
-            <li><router-link to="/Wydarzenia">Wydarzenia</router-link></li>
-            <li><router-link to="/Sekcje">Sekcje</router-link></li>
-            <li><router-link to="/Projekty">Projekty</router-link></li>
-            <li><router-link to="/Historia">Historia</router-link></li>
-            <li><router-link to="/Kontakt">Kontakt</router-link></li>
+            <li><a id="wydarzenia" href="/wydarzenia.html">Wydarzenia</a></li>
+            <li><a id="sekcje" href="/sekcje.html">Sekcje</a></li>
+            <li><a id="projekty" href="/projekty.html">Projekty</a></li>
+            <li><a id="historia" href="/historia.html">Historia</a></li>
+            <li><a id="kontakt" href="/kontakt.html">Kontakt</a></li>
         </ul>
         <a id='join-button' target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a>
     </nav>
@@ -59,5 +80,9 @@
 
     li {
         padding: 0 20px;
+    }
+
+    .current-top-subpage{
+        color: rebeccapurple;
     }
 </style>

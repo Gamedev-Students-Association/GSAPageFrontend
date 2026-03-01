@@ -5,18 +5,18 @@
 <template>
     <footer>
         <nav aria-label="Podstrony" class="subpages">
-            <router-link to="/">
+            <a to="/">
                 <figure>
                     <img alt="GSA Logo" src="/src/images/Logo Białe.svg" height="48px"></img>
                     <figcaption>Gamedev Student Association</figcaption>
                 </figure>
-            </router-link>
+            </a>
             <ul class="subpages-links">
-                <li class="subpages-links-element"><router-link to="/Wydarzenia">Wydarzenia</router-link></li>
-                <li class="subpages-links-element"><router-link to="/Sekcje">Sekcje</router-link></li>
-                <li class="subpages-links-element"><router-link to="/Projekty">Projekty</router-link></li>
-                <li class="subpages-links-element"><router-link to="/Historia">Historia</router-link></li>
-                <li class="subpages-links-element"><router-link to="/Kontakt">Kontakt</router-link></li>
+                <li class="subpages-links-element"><a hrf="/wydarzenia.html">Wydarzenia</a></li>
+                <li class="subpages-links-element"><a href="/sekcje.html">Sekcje</a></li>
+                <li class="subpages-links-element"><a href="/projekty.html">Projekty</a></li>
+                <li class="subpages-links-element"><a href="/historia.html">Historia</a></li>
+                <li class="subpages-links-element"><a href="/kontakt.html">Kontakt</a></li>
                 <li class="subpages-links-element"><a target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a></li>
             </ul>
         </nav>
