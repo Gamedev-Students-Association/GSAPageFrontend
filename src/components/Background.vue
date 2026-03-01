@@ -4,16 +4,19 @@
 
     const backgroundCanvas: TemplateRef<HTMLCanvasElement> = useTemplateRef("background");
     let hasBeenMounted: Ref<boolean> = ref(false);
-    const props = defineProps<{
-        backgroundFragmentShaderCode?: string
-    }>()
+    let backgroundFragmentShaderCode: Ref<string> = ref("");
+
+    const serverUrl: String = "http://127.0.0.1:8080/shaders"
+    fetch(serverUrl.concat(window.location.pathname))
+        .then((response) => response.text())
+        .then((shaderCode) => backgroundFragmentShaderCode.value = shaderCode)
 
     let BackgroundWebGL: Reactive<Canvas>;
 
     watchEffect(() => {
         if(backgroundCanvas.value && hasBeenMounted.value){
             BackgroundWebGL = reactive(new Canvas(backgroundCanvas.value, {
-                fragmentString: props.backgroundFragmentShaderCode
+                fragmentString: backgroundFragmentShaderCode.value
             }))
         }
 
