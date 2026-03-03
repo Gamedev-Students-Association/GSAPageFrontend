@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import Background from './components/Background.vue'
 import Topnav from './components/Topnav.vue'
 import Buttomnav from './components/Buttomnav.vue'
+import Sekcje from './components/Sekcje.vue'
 
 createApp(Background)
     .mount('#background')
@@ -11,3 +12,6 @@ createApp(Topnav)
 
 createApp(Buttomnav)
     .mount('#bottomnav')
+
+createApp(Sekcje)
+    .mount('#sectionsList')
