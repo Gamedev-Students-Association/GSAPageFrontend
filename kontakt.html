@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="kontakt.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
     <title>GSA kontakt</title>
   </head>
   <body>
     <div id="background"></div>
     <div id="topnav"></div>
     <main>
-      <section id="title">
-        <h1>Kontakt</h1>
-        <p>Aby skontaktować się z kołem, zgłoś się do zarządu gsa.</p>
+      <h1>Kontakt</h1>
+      <section id="address">
+        <div id="addressText">
+          <h2 id="addressTitle">Adres</h2>
+          <p><strong>Miejsce:</strong> Wydział Fizyki, Astronomii i Informatyki Stosowanej Uniwersytetu Jagiellońskiego</p>
+          <p><strong>Adres:</strong> ul. prof. Stanisława Łojasiewicza 11 30-348 Kraków</p>
+          <p><strong>Poków:</strong> H-01-05</p>
+        </div>
+        <div id="interactiveMap"></div>
+      </section>
+      <section id="mail">
+        <div id="write-mail" class="form-container"></div>
       </section>
     </main>
     <div id="bottomnav">
     <script type="module" src="/src/main.ts"></script>
-  </body>
+  <addressCircle/body>
 </html>
