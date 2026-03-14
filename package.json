@@ -16,6 +16,7 @@
   "dependencies": {
     "@types/leaflet": "^1.9.21",
     "@vueform/vueform": "^1.13.10",
+    "axios": "^1.13.6",
     "glsl-canvas-js": "^0.2.9",
     "iconify": "^1.4.0",
     "iconify-icon": "^3.0.0",

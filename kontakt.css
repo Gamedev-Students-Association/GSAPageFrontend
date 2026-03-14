@@ -31,7 +31,10 @@ h1{
 }
 
 .form-container{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
+

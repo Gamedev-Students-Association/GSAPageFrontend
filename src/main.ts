@@ -5,6 +5,7 @@ import Buttomnav from './components/Buttomnav.vue'
 import Sekcje from './components/Sekcje.vue'
 import Map from './components/Map.vue'
 import MailForm from './components/MailForm.vue'
+import ArticleList from './components/ArticleList.vue'
 
 import Vueform from '@vueform/vueform'
 import vueformConfig from './../vueform.config'
@@ -27,3 +28,6 @@ createApp(Map)
 createApp(MailForm)
     .use(Vueform, vueformConfig)
     .mount('#write-mail')
+
+createApp(ArticleList)
+    .mount('#list-articles')

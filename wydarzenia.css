@@ -7,3 +7,12 @@
     justify-content: center;
     flex-direction: column;
 }
+
+#list-articles{
+    background-color: #7721EF; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom, #7721EF, #040C30);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24Spx;
+    /* position: relative;
+    z-index: -12; */
+}
