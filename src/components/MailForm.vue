@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { required } from '@vueform/vueform';
-
-
 </script>
 
 <template>
     <div class="form-size-definer">
-        <Vueform endpoint="http://127.0.0.1:8080/mail" :display-errors="false" method="post" class="simple_form" :messages="{
+        <Vueform endpoint="http://127.0.0.1:8080/mail" :add-class="{container: 'full-width'}" :display-errors="false" method="post" class="simple_form" :messages="{
             required: ':attribute nie może być pusty'
         }">
             <StaticElement
@@ -30,5 +27,14 @@ import { required } from '@vueform/vueform';
 <style lang="css" scoped>
 h3 {
     text-align: center;
+}
+
+.full-width{
+    width:100%;
+}
+
+.form-size-definer {
+    max-width: 400px;
+    margin: auto;
 }
 </style>
