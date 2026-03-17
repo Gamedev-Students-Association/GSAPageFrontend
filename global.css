@@ -19,3 +19,8 @@ a {
 h1, h2, h3{
     font-family: 'space-grotesk', 'Arial','sans-serif';
 }
+
+.head-title{
+    font-size: 48px;
+    font-weight: bold;
+}
