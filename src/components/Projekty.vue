@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, type Ref, computed } from 'vue';
+import { ref, type Ref, computed, onMounted } from 'vue';
 
 const current: Ref<string> = ref('')
 
@@ -29,6 +29,8 @@ const webClasses = computed(() => ({
     'bigButton': current.value === 'web',
     'smallButton': current.value !== 'web'
 }))
+
+
 </script>
 
 <template>
@@ -106,7 +108,7 @@ const webClasses = computed(() => ({
 
 <style lang="css" scoped>
 .buttonTransition {
-    transition-property: width, height, background-color;
+    transition-property: height, width, background-color;
     transition-duration: 1s;
 }
 
