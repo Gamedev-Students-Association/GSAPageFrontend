@@ -5,18 +5,18 @@
 <template>
     <footer>
         <nav aria-label="Podstrony" class="subpages">
-            <a to="/">
+            <a href="./">
                 <figure>
                     <img alt="GSA Logo" src="/src/images/Logo Białe.svg" height="48px"></img>
                     <figcaption>Gamedev Student Association</figcaption>
                 </figure>
             </a>
             <ul class="subpages-links">
-                <li class="subpages-links-element"><a hrf="/wydarzenia.html">Wydarzenia</a></li>
-                <li class="subpages-links-element"><a href="/sekcje.html">Sekcje</a></li>
-                <li class="subpages-links-element"><a href="/projekty.html">Projekty</a></li>
-                <li class="subpages-links-element"><a href="/historia.html">Historia</a></li>
-                <li class="subpages-links-element"><a href="/kontakt.html">Kontakt</a></li>
+                <li class="subpages-links-element"><a href="./wydarzenia.html">Wydarzenia</a></li>
+                <li class="subpages-links-element"><a href="./sekcje.html">Sekcje</a></li>
+                <li class="subpages-links-element"><a href="./projekty.html">Projekty</a></li>
+                <li class="subpages-links-element"><a href="./historia.html">Historia</a></li>
+                <li class="subpages-links-element"><a href="./kontakt.html">Kontakt</a></li>
                 <li class="subpages-links-element"><a target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a></li>
             </ul>
         </nav>
@@ -72,11 +72,7 @@
         align-items: center;
         flex-direction: row;
         list-style-type: none;
-    }
-
-    hr{
-        padding: 0;
-        color: white;
+        padding: 10px 10px;
     }
 
     .social-media{
@@ -86,6 +82,29 @@
         align-items: center;
         flex-direction: row;
         
+    }
+
+    @media screen and (max-width: 1008px) {
+        .subpages-links{
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 780px){
+        
+
+        .subpages{
+            flex-direction: column;
+        }
+
+        .social-media{
+            justify-content: center;
+        }
+    }
+
+    hr{
+        padding: 0;
+        color: white;
     }
 
     .social-media-links{
@@ -110,7 +129,7 @@
         padding: 0.5em
     }
 
-    .subpages-links-elements{
+    .subpages-links{
         padding: 5px, 5px;
     }
 </style>

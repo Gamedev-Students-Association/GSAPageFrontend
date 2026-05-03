@@ -55,12 +55,15 @@ const articleClass = computed(() => ({
     }
 
     section{
-        width: 430px;
+        max-width: 430px;
         padding-left: 148px;
         padding-right: 148px;
     }
 
     img{
-        width: 678px;
+        max-width: 678px;
+        height: auto;
+        object-fit: contain;
+        overflow: hidden;
     }
 </style>

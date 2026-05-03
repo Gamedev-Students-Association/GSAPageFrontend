@@ -1,11 +1,18 @@
-main{
+main {
     min-height: 100vh;
 }
 
-h1, p{
+h1 {
+    padding-top: 200px;
     text-align: center;
 }
 
-h1{
-    padding-top: 200px;
+p {
+    text-align: left;
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 16px;
+    font-family: 'Space Grotesk', 'Arial', 'sans-serif';
+    font-size: 17px;
 }

@@ -3,7 +3,7 @@ import { onMounted, ref, type Ref } from 'vue';
 import SpecialArticle from './SpecialArticle.vue';
 
 const location: String[] = window.location.pathname.split('/')
-const server = "http://127.0.0.1:8080/get/json"
+const server = "/get/json"
 let dataSource: string = "";
 
 type article = {
@@ -37,7 +37,7 @@ if (location.length == 1) {
 
 let data: Ref<contentList> = ref(
     {
-        title: "Loading...",
+        title: "",
         articles: []
     }
 )

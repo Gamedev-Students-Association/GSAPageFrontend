@@ -28,11 +28,11 @@ import { onMounted } from 'vue';
     <nav aria-label="navigate subpages">
         <a href="/"><img role="img" src="/src/images/Logo.svg"></img></a>
         <ul>
-            <li><a id="wydarzenia" href="/wydarzenia.html">Wydarzenia</a></li>
-            <li><a id="sekcje" href="/sekcje.html">Sekcje</a></li>
-            <li><a id="projekty" href="/projekty.html">Projekty</a></li>
-            <li><a id="historia" href="/historia.html">Historia</a></li>
-            <li><a id="kontakt" href="/kontakt.html">Kontakt</a></li>
+            <li><a id="wydarzenia" href="./wydarzenia.html">Wydarzenia</a></li>
+            <li><a id="sekcje" href="./sekcje.html">Sekcje</a></li>
+            <li><a id="projekty" href="./projekty.html">Projekty</a></li>
+            <li><a id="historia" href="./historia.html">Historia</a></li>
+            <li><a id="kontakt" href="./kontakt.html">Kontakt</a></li>
         </ul>
         <a id='join-button' target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a>
     </nav>
@@ -43,7 +43,7 @@ import { onMounted } from 'vue';
 <style scoped>
     nav {
         width: 100%;
-        height: 85px;
+        min-height: 85px;
         backdrop-filter: blur(507px);
         background-color: rgba(23, 21, 47, 0.2);
         margin: 0;
@@ -66,13 +66,15 @@ import { onMounted } from 'vue';
         list-style-type: none;
         display: flex;
         flex-direction: row;
+        margin: 0;
+        padding: 0;
     }
     
     #join-button {
         text-decoration: none;
         color: white;
-        border-color: rebeccapurple;
-        background-color: rebeccapurple;
+        border-color: #7721EF;
+        background-color: #7721EF;
         border-style: solid;
         border-radius: 20px;
         padding: 5px 25px;
@@ -84,5 +86,30 @@ import { onMounted } from 'vue';
 
     .current-top-subpage{
         color: rebeccapurple;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 780px){
+        nav {
+            flex-direction: column;
+            position: sticky;
+        }
+
+        li {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        ul {
+            flex-direction: column;
+            height: auto;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;;
+        }
     }
 </style>

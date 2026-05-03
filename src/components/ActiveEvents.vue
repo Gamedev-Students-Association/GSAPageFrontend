@@ -14,7 +14,7 @@ type event = {
 const data: Ref<event[] | undefined> = ref();
 
 onMounted(async () => {
-    const response = await fetch("http://127.0.0.1:8080/get/json/events.json");
+    const response = await fetch("/get/json/events.json");
 response.json().then((contents) =>
     data.value = contents
 )
@@ -34,10 +34,30 @@ response.json().then((contents) =>
     margin: auto;
     grid-template-columns: 609px 609px;
     grid-auto-rows: 546px;
+    grid-template-areas: 
+        "hd hd"
+    ;
     place-items: center;
     gap: 127px 91px;
     align-items: center;
     justify-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1280px){
+    .event-grid{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 609px;
+    grid-auto-rows: 546px;
+    grid-template-areas: 
+        "hd"
+    ;
+    place-items: center;
+    gap: 127px 91px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
 }
 </style>

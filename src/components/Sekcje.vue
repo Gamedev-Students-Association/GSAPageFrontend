@@ -5,7 +5,7 @@ import Sekcja from './Sekcja.vue';
 let sekcje = ref()
 
 onMounted(async () => {
-    const response = await fetch("http://127.0.0.1:8080/get/json/sekcje.json");
+    const response = await fetch("/get/json/sekcje.json");
 response.json().then((data) =>
     sekcje.value = data
 )

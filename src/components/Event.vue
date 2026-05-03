@@ -9,7 +9,7 @@ const props = defineProps<{
 }>()
 
 const classes = {
-    child: true,
+    'child': true,
     'main-event': props.index == 0
 };
 
@@ -34,10 +34,17 @@ const classes = {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    transition-property: border-width;
+    transition-duration: 4s;
+}
+
+.child:hover{
+    border: solid white 2px;
+    border-radius: 16px;
 }
 
 .main-event {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: hd;
 }
 
 .event-image {
