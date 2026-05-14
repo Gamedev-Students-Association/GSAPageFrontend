@@ -85,7 +85,7 @@ import { onMounted } from 'vue';
     }
 
     .current-top-subpage{
-        color: rebeccapurple;
+        color: #7721EF;
         font-weight: bold;
     }
 

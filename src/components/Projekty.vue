@@ -20,17 +20,25 @@ const steamClasses = computed(() => ({
     'smallButton': current.value !== 'steam'
 }))
 
-const ujClasses = computed(() => ({
-    'bigButton': current.value === 'uj',
-    'smallButton': current.value !== 'uj'
-}))
-
 const webClasses = computed(() => ({
     'bigButton': current.value === 'web',
-    'smallButton': current.value !== 'web'
+    'smallButton': current.value !== 'web',
 }))
 
+const ujClasses = computed(() => ({
+    'bigButton': current.value === 'uj',
+    'smallButton': current.value !== 'uj',
+}))
 
+//using transform: scale to change sizes of elements results in the page layout not changing when size of box changes.
+//as a result of that all elements must be moved manually
+const moveWeb = computed(() => ({
+    'moveDownBelowActiveButton': current.value === 'steam'
+}))
+
+const moveUJ = computed(() => ({
+    'moveDownBelowActiveButton': current.value === 'steam' || current.value === 'web'
+}))
 </script>
 
 <template>
@@ -64,8 +72,8 @@ const webClasses = computed(() => ({
                 </a>
             </nav>
         </button>
-        <h2 class="project-heading">Gry do zagrania w przeglądarce:</h2>
-        <button @click="web" class="buttonTransition" :class="webClasses" :disabled="current === 'web'">
+        <h2 class="project-heading" :class="moveWeb">Gry do zagrania w przeglądarce:</h2>
+        <button @click="web" class="buttonTransition" :class="[webClasses, moveWeb]" :disabled="current === 'web'">
             <nav class="project-container">
                 <a :tabindex="current !== 'web' ? -1 : 0" class="item project-item" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img
                         class="project-image" src="/src/images/design.png" alt="Master Graphic" />
@@ -96,11 +104,10 @@ const webClasses = computed(() => ({
                     <div class="project-text">Najlepszy design</div>
                 </a>
             </nav>
-            <span>Bottom text</span>
         </button>
 
-        <h2 class="project-heading">Projekty z Uniwersytetem Jagiellońskim</h2>
-        <button @click="uj" class="buttonTransition" :class="ujClasses" :disabled="current === 'uj'">Test button
+        <h2 class="project-heading" :class="moveUJ">Projekty z Uniwersytetem Jagiellońskim</h2>
+        <button @click="uj" class="buttonTransition" :class="[ujClasses, moveUJ]" :disabled="current === 'uj'">Test button
             3: Return of the Button</button>
     </section>
 
@@ -108,8 +115,11 @@ const webClasses = computed(() => ({
 
 <style lang="css" scoped>
 .buttonTransition {
-    transition-property: height, width, background-color;
+    transition-property: transform, background-color, border-color, border-width, border-radius;
     transition-duration: 1s;
+    transform-origin: top center;
+    width: 50%;
+    height: 231px;
 }
 
 .buttonBehaviour {
@@ -118,23 +128,19 @@ const webClasses = computed(() => ({
     color: white;
 }
 
-.smallButton:hover {
-    background-color: rgba(128, 128, 128, 0.5);
-}
-
 .smallButton {
-    width: 50%;
-    height: 231px;
+    transform: scale(1);
     overflow: hidden;
     background: #040C30;
+    border-radius: 1em;
 }
 
 .smallButton:hover{
     background-color:#7721EF;
+    border-color: white;
 }
 
 .smallButton>nav>a {
-    width: 306px;
     pointer-events: none;
 }
 
@@ -142,35 +148,30 @@ const webClasses = computed(() => ({
     height: 80%;
     background-color: aqua;
     flex: none;
-    transition-property: width, height;
+    transition-property: transform;
     transition-duration: 1s;
     overflow: hidden;
+    width: 306px;
 }
 
 .project-heading {
     text-align: left;
     width: 90%;
+    transition: transform 1s;
 }
 
-/* .smallItem {
-    width: 80px;
-} */
-
-/* .bigItem {
-    width: 160px;
-} */
-
 .bigButton {
-    width: 100%;
-    height: 462px;
+    transform: scale(2);
     overflow: auto;
     scrollbar-color: white #7721EF;
     scrollbar-width: thin;
     background-color: transparent;
+    border-radius: 0;
+    border-width: 0;
+    border-color: #040C30;
 }
 
 .bigButton>nav>a {
-    width: 612px;
     pointer-events: all;
 }
 
@@ -200,18 +201,19 @@ section {
     grid-area: 1 / 1 / 2 /2;
     background-color: rgb(119, 33, 239);
     width: 100%;
-    transition-property: font-size, height;
+    transition-property: transform;
+    transform-origin: bottom center;
+    height: 20%;
     transition-duration: 1s;
+    font-size: 0.7em;
 }
 
 .smallButton>nav>a>div.project-text {
-    font-size: 0;
-    height: 0;
+    transform: scaleY(0);
 }
 
 .bigButton>nav>a>div.project-text {
-    font-size: 16px;
-    height: 20%;
+    transform: scaleY(1);
 }
 
 .project-image {
@@ -231,5 +233,9 @@ section {
 
 .bigButton>span {
     display: none;
+}
+
+.moveDownBelowActiveButton{
+    transform: translateY(231px);
 }
 </style>
