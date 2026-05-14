@@ -1,9 +1,18 @@
-#head {
-    height: 100vh;
-    width: 100vw;
-    font-size: xx-large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+main {
+    min-height: 100vh;
+}
+
+h1 {
+    padding-top: 200px;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 16px;
+    font-family: 'Space Grotesk', 'Arial', 'sans-serif';
+    font-size: 17px;
 }

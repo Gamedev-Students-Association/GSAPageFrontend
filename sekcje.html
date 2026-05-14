@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="sekcje.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     <title>Sekcje GSA</title>
   </head>
   <body>
@@ -13,18 +14,13 @@
     <div id="topnav"></div>
     <main>
       <section id="head">
-        <h1>Sekcje</h1>
-        <ul>
-            <li>Sekcja Lacrossa</li>
-            <li>Sekcja planszówek</li>
-            <li>Sekcja strzyżenia trawników</li>
-            <li>Wiwisekcja</li>
-            <li>Sekcja doktorska</li>
-            <li>Sekcja zbazowanych pomysłów</li>
-        </ul>
+        <h1 class="head-title">Sekcje</h1>
+        <p id="opis">Gamesdev Students Association to nie tylko wydarzenia, ale przede wszystkim <b>cotygodniowe spotkania, na których uczymy się tworzyć gry</b> – od pracy z silnikami, przez grafikę, po narrację. Działa też sekcja dyskusyjna o grach i branży oraz organizujemy spotkania z planszówkami.</p>
       </section>
+      <div id="sectionsList"></div>
     </main>
     <div id="bottomnav"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/minimal.ts"></script>
+    <script type="module" src="src/sekcje.ts"></script>
   </body>
 </html>
