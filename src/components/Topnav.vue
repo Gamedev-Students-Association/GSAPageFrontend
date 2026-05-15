@@ -26,7 +26,7 @@ import { onMounted } from 'vue';
 <template>
 <header>
     <nav aria-label="navigate subpages">
-        <a href="/"><img role="img" src="/src/images/Logo.svg"></img></a>
+        <a href="./"><img role="img" src="/src/images/Logo.svg"></img></a>
         <ul>
             <li><a id="wydarzenia" href="./wydarzenia.html">Wydarzenia</a></li>
             <li><a id="sekcje" href="./sekcje.html">Sekcje</a></li>

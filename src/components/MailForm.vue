@@ -3,6 +3,10 @@
 
 <template>
     <div class="form-size-definer">
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email"/>
+        </form>
         <Vueform endpoint="http://127.0.0.1:8080/mail" :add-class="{container: 'full-width'}" :display-errors="false" method="post" class="simple_form" :messages="{
             required: ':attribute nie może być pusty'
         }">
