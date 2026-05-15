@@ -15,7 +15,8 @@ export default defineConfig({
         sekcje: resolve(import.meta.dirname, 'sekcje.html'),
         historia: resolve(import.meta.dirname, 'historia.html'),
         projekty: resolve(import.meta.dirname, 'projekty.html'),
-        kontakt: resolve(import.meta.dirname, 'kontakt.html')
+        kontakt: resolve(import.meta.dirname, 'kontakt.html'),
+        main_pl: resolve(import.meta.dirname, '/pl/index.html')
       }
     }
   },
@@ -39,7 +40,8 @@ export default defineConfig({
       '/get': {
         target: "http://127.0.0.1:8080/"
       },
-      '/shaders': 'http://127.0.0.1:8080/shaders'
+      '/shaders': 'http://127.0.0.1:8080/shaders',
+      '/index.html': '/pl/index.html'
     }
   }
 })

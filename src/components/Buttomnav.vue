@@ -1,5 +1,39 @@
 <script setup lang="ts">
 import { getLocationLocale } from '@/modules/getLocale';
+import { ref, type Ref } from 'vue';
+
+interface Translation {
+    [index: string]: string
+}
+
+const locale = ref(getLocationLocale(window.location))
+const translation: Ref<{[index: string]: Translation}> = ref({
+    eventsText: {
+        pl: 'Wydarzenia',
+        en: 'Events'
+    },
+    sectionsText: {
+        pl: 'Sekcje',
+        en: 'Sections'
+    },
+    contactText: {
+        pl: 'Kontakt',
+        en: 'Contact us'
+    },
+    historyText: {
+        pl: 'Historia',
+        en: 'History'
+    },
+    projectsText: {
+        pl: 'Projekty',
+        en: 'Projects'
+    },
+    joinText: {
+        pl: 'Dołącz do nas',
+        en: 'Join us'
+    }
+})
+
 </script>
 
 <template>
@@ -12,12 +46,12 @@ import { getLocationLocale } from '@/modules/getLocale';
                 </figure>
             </a>
             <ul class="subpages-links">
-                <li class="subpages-links-element"><a href="./wydarzenia.html">Wydarzenia</a></li>
-                <li class="subpages-links-element"><a href="./sekcje.html">Sekcje</a></li>
-                <li class="subpages-links-element"><a href="./projekty.html">Projekty</a></li>
-                <li class="subpages-links-element"><a href="./historia.html">Historia</a></li>
-                <li class="subpages-links-element"><a href="./kontakt.html">Kontakt</a></li>
-                <li class="subpages-links-element"><a target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">Dołącz do nas</a></li>
+                <li class="subpages-links-element"><a href="./wydarzenia.html">{{ translation.eventsText[locale] }}</a></li>
+                <li class="subpages-links-element"><a href="./sekcje.html">{{ translation.sectionsText[locale] }}</a></li>
+                <li class="subpages-links-element"><a href="./projekty.html">{{ translation.projectsText[locale] }}</a></li>
+                <li class="subpages-links-element"><a href="./historia.html">{{ translation.historyText[locale] }}</a></li>
+                <li class="subpages-links-element"><a href="./kontakt.html">{{ translation.contactText[locale] }}</a></li>
+                <li class="subpages-links-element"><a target="_blank" href="https://forms.gle/bF7fYinzHXs6Gaud8">{{ translation.joinText[locale] }}</a></li>
             </ul>
         </nav>
         <hr/>
@@ -68,7 +102,7 @@ import { getLocationLocale } from '@/modules/getLocale';
     .subpages-links{
         width: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-direction: row;
         list-style-type: none;
